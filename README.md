@@ -24,10 +24,10 @@
 <monster-form></monster-form>
 
 <script type="module">
-  import { Monster, MonsterForm } from 'http://unpkg.com/@hikaruna/pocket-monster'
+  import { Monster, MonsterForm } from 'https://unpkg.com/@hikaruna/pocket-monster'
   // or
-  // import Monster from 'http://unpkg.com/@hikaruna/pocket-monster/dist/lib/Monster.js'
-  // import MonsterForm from 'http://unpkg.com/@hikaruna/pocket-monster/dist/lib/components/MonsterForm.js'
+  // import Monster from 'https://unpkg.com/@hikaruna/pocket-monster/dist/lib/Monster.js'
+  // import MonsterForm from 'https://unpkg.com/@hikaruna/pocket-monster/dist/lib/components/MonsterForm.js'
 
   const monster = new Monster({ name: "フシギダネ" });
 
@@ -41,7 +41,7 @@
 ### レガシーブラウザ
 
 ```html
-<script src="http://unpkg.com/@hikaruna/pocket-monster/dist/pocket-monster.umd.js"></script>
+<script src="https://unpkg.com/@hikaruna/pocket-monster/dist/pocket-monster.umd.js"></script>
 
 <script>
   var monster = new pocketMonster.Monster({ name: "フシギダネ" });
@@ -67,18 +67,25 @@ import { Monster } from '@hikaruna/pocket-monster'
 const monster = new Monster({ name: "フシギダネ" });
 ```
 
-### node.js ネイティブ
+### node.js
 
 ```console
 $ npm i @hikaruna/pocket-monster
 ```
 
 ```javascript
-const { Monster } = require('@hikaruna/pocket-monster');
+const { Monster, MonsterForm } = require('@hikaruna/pocket-monster');
 // or
 // const Monster = require('@hikaruna/pocket-monster/lib/Monster');
+// const MonsterForm = require('@hikaruna/pocket-monster/lib/components/MonsterForm');
+
 
 const monster = new Monster({ name: "フシギダネ" });
+
+window.onload = () => {
+  const monsterForm = document.querySelector('monster-form');
+  monsterForm.monster = monster;
+}
 ```
 
 ## Development
