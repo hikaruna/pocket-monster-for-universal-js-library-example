@@ -1,0 +1,39 @@
+{
+  "name": "@hikaruna/pocket-monster",
+  "version": "0.0.1",
+  "description": "様々な環境から読み込めるライブラリを生成するexample",
+  "main": "lib/index",
+  "types": "typings/index.d.ts",
+  "unpkg": "dist/lib/index.js",
+  "scripts": {
+    "clean": "rm -rf dist lib typings .build *.tgz package",
+    "prebuild": "npm run clean",
+    "build": "tsc && rollup -c",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "hikaruna",
+  "license": "MIT",
+  "homepage": "https://github.com/hikaruna/pocket-monster-for-universal-js-package-example",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hikaruna/pocket-monster-for-universal-js-package-example.git"
+  },
+  "files": [
+    "dist",
+    "lib",
+    "typings",
+    "src",
+    "README.md"
+  ],
+  "devDependencies": {
+    "glob": "^7.1.5",
+    "rollup": "^1.25.2",
+    "rollup-plugin-alias": "^2.2.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "typescript": "^3.6.4"
+  },
+  "dependencies": {
+    "lit-html": "^1.1.2"
+  }
+}

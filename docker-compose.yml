@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  node:
+    build: .
+    volumes:
+      - .:/app
+      - ~/.npmrc:/usr/local/etc/npmrc
+      - ~/.gitconfig:/etc/gitconfig
+      - ~/.ssh:/etc/ssh
+      - ~/.ssh/config:/etc/ssh/ssh_config

@@ -1,0 +1,11 @@
+/node_modules/
+.npm
+*.tgz
+/package/
+
+.build/
+lib/
+typings/
+dist/
+
+.DS_Store
