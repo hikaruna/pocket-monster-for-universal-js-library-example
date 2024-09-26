@@ -27,7 +27,7 @@
   ],
   "devDependencies": {
     "glob": "^7.1.5",
-    "rollup": "^1.25.2",
+    "rollup": "^2.79.2",
     "rollup-plugin-alias": "^2.2.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
